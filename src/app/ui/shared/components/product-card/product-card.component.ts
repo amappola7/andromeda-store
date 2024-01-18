@@ -8,4 +8,5 @@ import { ProductM } from 'src/app/models/product';
 })
 export class ProductCardComponent {
   @Input() product!: ProductM;
+  @Input() page!: string;
 }
