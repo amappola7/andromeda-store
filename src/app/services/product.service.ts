@@ -7,7 +7,7 @@ import { ProductM } from '../models/product';
   providedIn: 'root'
 })
 export class ProductService {
-  private _url: string = 'http://localhost:3000/users';
+  private _url: string = 'http://localhost:3000/products';
 
   constructor(private http: HttpClient) { }
 
@@ -21,12 +21,17 @@ export class ProductService {
     )
   }
 
-  getProductById(id: number): Observable<ProductM | null> {
+  getProductById(id: number): Observable<ProductM> {
     return this.http.get<ProductM>(`${this._url}/${id}`).pipe(
       take(1),
       catchError((error) => {
+        const voidProduct: ProductM = {
+          id: 0,
+          name: '',
+          description: ''
+        };
         console.log('Error getting product', error);
-        return of(null);
+        return of(voidProduct);
       })
     )
   }
