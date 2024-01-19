@@ -2,18 +2,87 @@
   "products": [
     {
       "id": 1,
-      "name": "Producto 1",
-      "description": "Descripción del Producto 1"
+      "name": "Agenda Premium Kiut 2024 At Own",
+      "description": "Agendas Premium Kiut ¡Es nuestra agenda más especial! NUEVO: ahora viene con código QR en cada mes, con contenido valioso e inspirador que te va a ayudar en el cumplimiento de tus propósitos En su interior encontrarás: • 2 hojas con los más lindos stickers con foil oro • Numero de Hojas: 118  • Retos para hábitos positivos: creatividad, bienestar y productividad. • Espacio de agradecimiento • Control de hábitos. • Vision Board y mapa de sueños • Planeador financiero • Tarjetas de afirmación • Balance del año  ¡Y más hermosos detalles que te van a enamorar de esta agenda personal ! Trae resorte de cierre y cinta satinada para separar las hojas.",
+      "image": "https://cdn1.totalcommerce.cloud/normaco/product-zoom/es/agenda-premium-kiut-2024-at-own-1.webp",
+      "price": 39992
     },
     {
       "id": 2,
-      "name": "Producto 2",
-      "description": "Descripción del Producto 2"
+      "name": "Agenda Diaria Kiut 2024 The Starts",
+      "description": "Agendas diaria Kiut. Hay quienes dicen que, entre más espacio mejor, para ellas nuestra agenda diaria es perfecta. En su interior encontrarás: • 2 hojas con los más lindos stickers • Contrato contigo misma. • Numero de hojas: 189 • Tiene espacio para cada escribir en cada día. • Espacio para notas • Mapa de sueños. • Planeador mensual • Control de gastos y hábitos en cada mes • Espacio para escribir los objetivos del año. ¡Y más hermosos detalles que te van a enamorar de esta agenda personal ! Cada mes trae un separador que le permite a la usuaria diferenciar mejor entre ellos.",
+      "image": "https://cdn1.totalcommerce.cloud/normaco/product-zoom/es/agenda-diaria-kiut-2024-the-starts-1.webp",
+      "price": 28520
     },
     {
       "id": 3,
-      "name": "Producto 3",
-      "description": "Descripción del Producto 3"
+      "name": "Agenda Diaria Kiut 2024 Progress Perfection",
+      "description": "Agendas diaria Kiut. Hay quienes dicen que, entre más espacio mejor, para ellas nuestra agenda diaria es perfecta. En su interior encontrarás: • 2 hojas con los más lindos stickers • Numero de hojas: 189 • Contrato contigo misma. • Tiene espacio para cada escribir en cada día. • Espacio para notas • Mapa de sueños. • Planeador mensual • Control de gastos y hábitos en cada mes • Espacio para escribir los objetivos del año. ¡Y más hermosos detalles que te van a enamorar de esta agenda personal ! Cada mes trae un separador que le permite a la usuaria diferenciar mejor entre ellos.",
+      "image": "https://cdn1.totalcommerce.cloud/normaco/product-zoom/es/agenda-diaria-kiut-2024-progress-perfection-1.webp",
+      "price": 28520
+    },
+    {
+      "id": 4,
+      "name": "Kit Mapa De Sueños Kiut",
+      "description": "¡NUEVO! Kiut te acompaña a seguir todos tus sueños. El Dream Board Kiut es una herramienta poderosa diseñada para ayudarte a visualizar, perseguir y alcanzar esos sueños que anidan en tu corazón. Contiene elementos cuidadosamente seleccionados para nutrir tu creatividad y empoderarte hacia el cielo de tus aspiraciones. Dentro de este mágio kit, encontrarás: - 1 Mapa de sueños. - 5 Tarjetas de afirmación. - 5 Hojas de stickers. - 5 Páginas de inspiración. - 1 Caja de Colores Kiut x15",
+      "image": "https://cdn1.totalcommerce.cloud/normaco/product-zoom/es/kit-mapa-de-suenos-kiut-1.webp",
+      "price": 49350
+    },
+    {
+      "id": 5,
+      "name": "Kit de Lettering Cartilla + Marcadores Punta Pincel X30 By Nativalencia",
+      "description": "Sabemos que quieres aprender a hacer letras más lindas. ¡El NUEVO kit de lettering es perfecto para que lleves tus letras a otro nivel!. En él encontrarás: - 1 Libreta con tips y ejercicios para aprender lettering - 1 Caja de Marcadores punta pincel con:18 colores lindos4 colores pastel4 colores neón4 colores metalizados",
+      "image": "https://cdn1.totalcommerce.cloud/normaco/product-zoom/es/kit-de-lettering-cartilla-%2B-marcadores-punta-pincel-x30-by-nativalencia-2.webp",
+      "price": 92990
+    },
+    {
+      "id": 6,
+      "name": "Planeador Diario Kiut 2024 Step Step (Sin fecha)",
+      "description": "este planeador no volverás a olvidar ninguno de tus pendientes del día En su interior encontrarás: • Numero de Hojas: 30 • Lindos stickers para resaltar actividades y fechas • Espacio para organizar cada detalle del día • Tips para crear una rutina ¡Y más hermosos detalles que te van a enamorar de esta agenda personal !",
+      "image": "https://cdn1.totalcommerce.cloud/normaco/product-zoom/es/planeador-diario-kiut-2024-step-step-%28sin-fecha%29-1.webp",
+      "price": 13480
+    },
+    {
+      "id": 7,
+      "name": "Agenda Permanente Kiut 2024 Good",
+      "description": "Agendas permanente Kiut ¡Esta agenda sin fechas te da la libertad de iniciar cuando quieras! ¡Ahora viene con nuevas herramientas! Tips de autocuidado y separadores para recortar y usar en tu agenda o libro favorito. En su interior encontrarás: • 2 hojas con los más lindos stickers • Afirmaciones positivas para comenzar tu día • Numero de hojas: 160  • Más espacio para escribir. • Espacio para notas. • Habit Tracker • Vision Board. • Control de gastos. ¡Y más hermosos detalles que te van a enamorar de esta agenda personal !",
+      "image": "https://cdn1.totalcommerce.cloud/normaco/product-zoom/es/agenda-permanente-kiut-2024-good-1.webp",
+      "price": 30832
+    },
+    {
+      "id": 8,
+      "name": "Lapiceros Kiut Colores X8",
+      "description": "'¡Ahora tus notas tendrán el mejor estilo! Los nuevos lapiceros Kiut te ofrecen trazos suaves, delicados y continuos. Son retractiles y prácticos para usar. Tienen punta de 0,7 mm para una escritura delicada. Su diseño es super lindo y trae frases inspiradoras. Su cuerpo con textura soft touch es muy suave y fácil de sujetar para mayor comodidad en los trazos.'",
+      "image": "https://cdn1.totalcommerce.cloud/normaco/product-zoom/es/lapiceros-kiut-colores-x8-1.webp",
+      "price": 17500
+    },
+    {
+      "id": 9,
+      "name": "Marcadores Lavables Kiut X 80",
+      "description": "¡Marcadores lavables! Estos marcadores son ideales para escribir, su punta cónica te permite realizar trazos gruesos y delgados. Su tinta es lavable a base de agua. Cuando se seque el marcador puedes sumergir la punta unos minutos en agua para usarlo nuevamente Llena tu mundo de color con Kiut",
+      "image": "https://cdn1.totalcommerce.cloud/normaco/product-zoom/es/marcadores-lavables-kiut-x-80-6.webp",
+      "price": 84990
+    },
+    {
+      "id": 10,
+      "name": "Caja de Colores Kiut Pastel X12",
+      "description": "'¡Caja de Colores especiales Kiut! Ahora con mina más suave que permite hacer mejores difuminados Llena tu mundo de color con Kiut'",
+      "image": "https://cdn1.totalcommerce.cloud/normaco/product-zoom/es/caja-de-colores-kiut-pastel-x12-1.webp",
+      "price": 19900
+    },
+    {
+      "id": 11,
+      "name": "Resaltadores Kiut Pastel Caja X8",
+      "description": "El toque final de cualquier creación lo trae marcadores Kiut. Hacer las notas más bonitas y decorar títulos.",
+      "image": "https://cdn1.totalcommerce.cloud/normaco/product-zoom/es/resaltadores-kiut-pastel-caja-x8-1.webp",
+      "price": 20210
+    },
+    {
+      "id": 12,
+      "name": "aja de Colores Kiut Doble Punta X13",
+      "description": "Caja de Colores Kiut! Ahora con mina más suave que permite hacer mejores difuminados, su cuerpo trae un mensaje especial y tono degrade con detalles doraditos Llena tu mundo de color con Kiut'",
+      "image": "https://cdn1.totalcommerce.cloud/normaco/product-zoom/es/caja-de-colores-kiut-doble-punta-x13-1.webp",
+      "price": 34900
     }
   ]
 }
