@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './product-form.component.html',
   styleUrls: ['./product-form.component.scss']
 })
-export class ProductFormComponent {
+export class ProductFormComponent implements OnInit {
   createProductForm!: FormGroup;
 
   constructor(
@@ -20,5 +20,13 @@ export class ProductFormComponent {
       price: [0, [Validators.required, Validators.pattern('[0-9 ]*')]],
       image: ['', [Validators.required]],
     });
+  };
+
+  onSubmit() {
+    if(this.createProductForm.valid) {
+      console.log(this.createProductForm.value)
+    } else {
+      this.createProductForm.markAllAsTouched();
+    }
   }
 }

@@ -8,21 +8,25 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    children: [
-      // {
-      //   path: 'products/:id',
-      //   component: ProductDetailsComponent
-      // },
-      {
-        path: 'create-product',
-        component: ProductFormComponent
-      }
-    ]
+    // children: [
+    //   {
+    //     path: 'products/:id',
+    //     component: ProductDetailsComponent
+    //   },
+    //   {
+    //     path: 'create-product',
+    //     component: ProductFormComponent
+    //   }
+    // ]
   }
   ,
   {
     path: 'products/:id',
     component: ProductDetailsComponent
+  },
+  {
+    path: 'create-product',
+    component: ProductFormComponent
   }
 ];
 
