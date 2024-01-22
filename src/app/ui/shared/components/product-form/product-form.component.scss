@@ -1,0 +1,20 @@
+@import "../../../../../styles.scss";
+
+.product-form__container {
+  @include displayFlex(column, center, center, 2rem);
+  width: 100vw;
+  padding-top: 2.5rem;
+
+  form {
+    @include displayFlex(column, center, flex-start, 1rem);
+
+    .control-container {
+      @include displayFlex(row, flex-start, center, 1rem);
+    }
+
+    .btn {
+      align-self: center;
+      margin-top: 1rem;
+    }
+  }
+}

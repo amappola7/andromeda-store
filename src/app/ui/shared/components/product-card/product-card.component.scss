@@ -1,0 +1,21 @@
+@import "../../../../../styles.scss";
+
+.product-card__container {
+  @include displayFlex(column, center, center, 0.5rem);
+  width: 24rem;
+  height: 30rem;
+  border: solid 0.1rem $grey-color;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+
+  img {
+    width: 18rem;
+    height: 18rem;
+    object-fit: cover;
+  }
+
+  p {
+    width: 100%;
+    text-align: center;
+  }
+}

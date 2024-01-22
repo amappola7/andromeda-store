@@ -1,1 +1,78 @@
-/* You can add global styles to this file, and also import other style files */
+$font-family: 'Montserrat', sans-serif;
+$main-color: #c3a4fe;
+$secondary-color: #9356f5;
+$purple-color: #c7c6ff;
+$pink-color: #e6c6ff;
+$green-color: #9de9c6;
+$blue-color: #a1d8f5;
+$grey-color: #d5d5d5;
+$gradient: linear-gradient(90deg, rgba(230,198,255,1) 0%, rgba(195,164,254,1) 32%, rgba(161,216,245,1) 71%, rgba(157,233,198,1) 100%);
+
+@mixin displayFlex($flex-direction: row, $justify-content, $align-items, $gap: 0, $wrap: wrap) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap: $gap;
+  flex-wrap: $wrap;
+}
+
+html {
+  font-size: 10px;
+  font-family: $font-family;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  width: 7rem;
+  height: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: $font-family;
+  font-size: 1.2rem;
+  color: white;
+  background-color: $main-color;
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $secondary-color;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+a {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+}
+
+.lbl {
+  width: 10rem;
+  font-size: 1.2rem;
+}
+
+.ipt {
+  width: 22rem;
+  height: 2.8rem;
+  padding: 0.5rem;
+  border: grey 0.1rem solid;
+  border-radius: 1.4rem;
+  font-size: 1.2rem;
+}
+
+.error-message {
+  font-size: 1rem;
+  color: $main-color;
+}

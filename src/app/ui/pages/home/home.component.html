@@ -2,7 +2,6 @@
 <app-nav-bar></app-nav-bar>
 <section class="home">
   <div class="products-list__container">
-    <h2>Products List</h2>
     <app-product-card *ngFor="let product of productsList" [product]="product" [page]="'home'"></app-product-card>
   </div>
 </section>

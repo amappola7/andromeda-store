@@ -1,0 +1,15 @@
+@import '../../../../styles.scss';
+
+.home {
+  width: 100vw;
+  max-width: 100vw;
+  padding: 2.5rem 0;
+
+  .products-list__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 2.5rem;
+    width: 100%;
+  }
+}
