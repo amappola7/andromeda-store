@@ -6,11 +6,7 @@ import { HomeComponent } from './ui/pages/home/home.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
-  },
-  {
-    path: 'products/:id',
-    component: ProductDetailsComponent
+    loadChildren: () => import('./ui/pages/pages.module').then(m => m.PagesModule)
   }
 ];
 

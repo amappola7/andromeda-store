@@ -18,10 +18,6 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     HttpClientModule
   ],
   exports: [
-    CommonModule,
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
     HeaderComponent,
     ProductCardComponent
   ]
