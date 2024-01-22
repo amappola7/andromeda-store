@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-product-form',
@@ -10,7 +11,8 @@ export class ProductFormComponent implements OnInit {
   createProductForm!: FormGroup;
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private productService: ProductService
   ) { }
 
   ngOnInit() {
@@ -24,7 +26,11 @@ export class ProductFormComponent implements OnInit {
 
   onSubmit() {
     if(this.createProductForm.valid) {
-      console.log(this.createProductForm.value)
+      this.productService.createProduct(this.createProductForm.value)
+      .subscribe(() => {
+        alert('Product successfully created');
+        this.createProductForm.reset();
+      })
     } else {
       this.createProductForm.markAllAsTouched();
     }

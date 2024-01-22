@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError, of, take } from 'rxjs';
-import { ProductM } from '../models/product';
+import { Observable, catchError, of, take, tap } from 'rxjs';
+import { ProductM, RawProductM } from '../models/product';
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +34,17 @@ export class ProductService {
         };
         console.log('Error getting product', error);
         return of(voidProduct);
+      })
+    )
+  }
+
+  createProduct(productData: RawProductM): Observable<ProductM | null> {
+    return this.http.post<ProductM>(this._url, productData).pipe(
+      take(1),
+      tap(() => console.log('Product successfully created')),
+      catchError((error) => {
+        console.log('Error creating product', error);
+        return of(null);
       })
     )
   }

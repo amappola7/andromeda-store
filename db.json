@@ -83,6 +83,13 @@
       "description": "Caja de Colores Kiut! Ahora con mina más suave que permite hacer mejores difuminados, su cuerpo trae un mensaje especial y tono degrade con detalles doraditos Llena tu mundo de color con Kiut'",
       "image": "https://cdn1.totalcommerce.cloud/normaco/product-zoom/es/caja-de-colores-kiut-doble-punta-x13-1.webp",
       "price": 34900
+    },
+    {
+      "name": "Cartuchera Fashion Dark Paradise",
+      "description": "La cartuchera fashion Kiut tiene el espacio ideal para que lleves todo lo que necesites. Tambien la puedes usar como cosmetiquera. Elaborada en poliéster Esta trae una cadenita súper linda ¡Haz el match perfecto con tu morral!",
+      "price": 33500,
+      "image": "https://cdn1.totalcommerce.cloud/normaco/product-zoom/es/cartuchera-fashion-dark-paradise-1.webp",
+      "id": 13
     }
   ]
 }
