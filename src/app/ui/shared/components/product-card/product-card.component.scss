@@ -1,6 +1,6 @@
 @import "../../../../../styles.scss";
 
-.product-card__container {
+.product-card__home {
   @include displayFlex(column, center, center, 0.5rem);
   width: 24rem;
   height: 30rem;
@@ -14,8 +14,42 @@
     object-fit: cover;
   }
 
-  p {
+  .content__container {
+    @include displayFlex(row, center, center, 0.5rem);
     width: 100%;
-    text-align: center;
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      text-align: center;
+      color: black;
+    }
+
+    p {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.product-card__details {
+  @include displayFlex(row, center, center);
+  padding: 0 3rem;
+
+  img {
+    width: 50rem;
+    height: 50rem;
+    object-fit: cover;
+  }
+
+  .content__container {
+    @include displayFlex(row, flex-start, center, 1rem);
+    width: calc(100% - 60rem);
+
+    .price {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: $main-color;
+    }
   }
 }

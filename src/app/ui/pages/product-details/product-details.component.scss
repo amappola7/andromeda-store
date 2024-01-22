@@ -1,0 +1,10 @@
+@import "../../../../styles.scss";
+
+.product-details__page {
+  @include displayFlex(column, flex-start, flex-start);
+  width: 100vw;
+
+  .product-details {
+    padding-top: 2.5rem;
+  }
+}
