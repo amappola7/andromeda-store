@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { ProductFormComponent } from './components/product-form/product-form.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     ProductCardComponent,
+    ProductFormComponent,
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
   ],
   exports: [
     HeaderComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ProductFormComponent
   ]
 })
 export class SharedModule { }
