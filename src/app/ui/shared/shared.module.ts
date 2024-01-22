@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from 'src/app/app-routing.module';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
+import { PagesRoutingModule } from '../pages/pages-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,9 +13,7 @@ import { ProductFormComponent } from './components/product-form/product-form.com
   ],
   imports: [
     CommonModule,
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
+    PagesRoutingModule
   ],
   exports: [
     HeaderComponent,
