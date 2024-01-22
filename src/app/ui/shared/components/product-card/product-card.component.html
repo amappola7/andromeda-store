@@ -1,5 +1,5 @@
 <div class="product-card__container">
   <p>{{product.name}}</p>
   <p>{{product.description}}</p>
-  <button *ngIf="page === 'home'"><a [routerLink]="['/products', product.id]">Details</a></button>
+  <button *ngIf="page === 'home'"><a [routerLink]="['products', product.id]">Details</a></button>
 </div>
