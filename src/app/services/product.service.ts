@@ -28,7 +28,9 @@ export class ProductService {
         const voidProduct: ProductM = {
           id: 0,
           name: '',
-          description: ''
+          description: '',
+          price: 0,
+          image: ''
         };
         console.log('Error getting product', error);
         return of(voidProduct);
