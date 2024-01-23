@@ -52,6 +52,10 @@ html {
   cursor: pointer;
 }
 
+.btn:hover {
+  background-color: $secondary-color;
+}
+
 h2 {
   font-size: 1.6rem;
   font-weight: 700;
