@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductM } from 'src/app/models/product';
 
 @Component({
@@ -10,7 +11,11 @@ export class ProductCardComponent {
   @Input() product!: ProductM;
   @Input() page!: string;
 
+  constructor(
+    private router: Router
+  ) {}
+
   onClick(productId: number) {
-    console.log(productId);
+    this.router.navigate([`/product/details/${productId}`]);
   }
 }
