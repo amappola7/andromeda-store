@@ -1,4 +1,4 @@
-<!-- <div
+<div
   ngClass="{{ page !== 'home' ? 'product-card__details' : 'product-card__home' }}"
 >
   <img [src]="product.image" [alt]="product.name" [title]="product.name" />
@@ -6,8 +6,8 @@
     <h2>{{ product.name }}</h2>
     <p *ngIf="page !== 'home'">{{ product.description }}</p>
     <p class="price">{{ product.price | currency }}</p>
-    <button class="btn" *ngIf="page === 'home'">
-      <a class="anchor" [routerLink]="['products', product.id]">Details</a>
+    <button class="btn" *ngIf="page === 'home'" (click)="onClick(product.id)">
+      Details
     </button>
   </div>
-</div> -->
+</div>
