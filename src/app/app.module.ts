@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './ui/shared/shared.module';
 import { CommonModule } from '@angular/common';
-import { AuthModule } from './ui/pages/auth/auth/auth.module';
+import { AuthModule } from './ui/pages/auth/auth.module';
 import { AdminModule } from './ui/pages/admin/admin.module';
 import { HomeModule } from './ui/pages/home/home.module';
 import { ProductModule } from './ui/pages/product/product.module';

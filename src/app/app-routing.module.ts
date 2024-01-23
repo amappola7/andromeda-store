@@ -1,17 +1,9 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { ProductDetailsComponent } from './ui/pages/product/product-details/product-details.component';
-import { HomeComponent } from './ui/pages/home/home.component';
-
-const routes: Routes = [
-  {
-    path: '',
-    loadChildren: () => import('./ui/pages/pages.module').then(m => m.PagesModule)
-  }
-];
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './app-routes';
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
