@@ -5,6 +5,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   exports: [
     HeaderComponent,
