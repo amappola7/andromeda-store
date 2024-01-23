@@ -10,10 +10,12 @@ import { AuthModule } from './ui/pages/auth/auth.module';
 import { AdminModule } from './ui/pages/admin/admin.module';
 import { HomeModule } from './ui/pages/home/home.module';
 import { ProductModule } from './ui/pages/product/product.module';
+import { PageNotFoundComponent } from './ui/pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PageNotFoundComponent
   ],
   imports: [
     CommonModule,
