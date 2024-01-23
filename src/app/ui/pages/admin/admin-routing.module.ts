@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './admin.component';
 
-const adminRoutes: Routes = [];
+const adminRoutes: Routes = [
+  {
+    path: 'create-product',
+    component: AdminComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(adminRoutes)],
