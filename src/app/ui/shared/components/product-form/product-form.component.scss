@@ -3,7 +3,6 @@
 .product-form__container {
   @include displayFlex(column, center, center, 2rem);
   width: 100vw;
-  padding-top: 2.5rem;
 
   form {
     @include displayFlex(column, center, flex-start, 1rem);
@@ -14,7 +13,7 @@
 
     .btn {
       align-self: center;
-      margin-top: 1rem;
+      margin-top: 0.7rem;
     }
   }
 }
