@@ -156,6 +156,22 @@
         "zip": 15088
       },
       "id": 4
+    },
+    {
+      "username": "pepe_grillo",
+      "role": "admin",
+      "firstName": "Juan",
+      "secondName": "Camilo",
+      "surname": "Velasco",
+      "secondSurname": "Giraldo",
+      "email": "pepe@gmail.com",
+      "password": "1234sdf-",
+      "address": {
+        "street": "Calle 170",
+        "city": "Bogotá",
+        "zip": 11101
+      },
+      "id": 5
     }
   ]
 }
