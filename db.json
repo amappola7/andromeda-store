@@ -91,5 +91,71 @@
       "image": "https://cdn1.totalcommerce.cloud/normaco/product-zoom/es/cartuchera-fashion-dark-paradise-1.webp",
       "id": 13
     }
+  ],
+  "users": [
+    {
+      "username": "joDoe",
+      "role": "user",
+      "firstName": "John",
+      "secondName": null,
+      "surname": "Doe",
+      "secondSurname": null,
+      "email": "john@example.com",
+      "password": "password1",
+      "address": {
+        "street": "Landers Street",
+        "city": "San Francisco",
+        "zip": 94016
+      },
+      "id": 1
+    },
+    {
+      "username": "jaDoe",
+      "role": "user",
+      "firstName": "Jane",
+      "secondName": null,
+      "surname": "Doe",
+      "secondSurname": null,
+      "email": "jane@example.com",
+      "password": "password2",
+      "address": {
+        "street": "Edna Avenue",
+        "city": "Las Vegas",
+        "zip": 88901
+      },
+      "id": 2
+    },
+    {
+      "username": "amappola7",
+      "role": "admin",
+      "firstName": "Ana",
+      "secondName": "Maria",
+      "surname": "Porras",
+      "secondSurname": "Pinto",
+      "email": "aporras2@slb.com",
+      "password": "123asdfg-",
+      "address": {
+        "street": "King's road",
+        "city": "London",
+        "zip": 12345
+      },
+      "id": 3
+    },
+    {
+      "username": "higgs_caramelo",
+      "role": "admin",
+      "firstName": "Higgs",
+      "secondName": "",
+      "surname": "Porras",
+      "secondSurname": "",
+      "email": "higgins@gmail.com",
+      "password": "12345asdf-",
+      "address": {
+        "street": "Carrera 3",
+        "city": "Susacón",
+        "zip": 15088
+      },
+      "id": 4
+    }
   ]
 }
