@@ -6,19 +6,20 @@ import { LogInComponent } from './log-in/log-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LogInFormComponent } from './components/log-in-form/log-in-form.component';
 import { SignUpFormComponent } from './components/sign-up-form/sign-up-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-  
     LogInComponent,
-       SignUpComponent,
-       LogInFormComponent,
-       SignUpFormComponent
+    SignUpComponent,
+    LogInFormComponent,
+    SignUpFormComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class AuthModule { }
