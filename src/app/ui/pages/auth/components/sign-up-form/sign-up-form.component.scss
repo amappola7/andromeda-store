@@ -1,0 +1,23 @@
+@import "../../../../../../styles.scss";
+
+.sign-up__form {
+  @include displayFlex(column, center, center, 2rem);
+  width: 100vw;
+
+  form {
+    @include displayFlex(column, center, flex-start, 0.8rem);
+
+    .control-container {
+      @include displayFlex(row, flex-start, center, 1rem);
+    }
+
+    .address__container {
+      @include displayFlex(column, center, flex-start, 0.8rem);
+    }
+
+    .btn {
+      align-self: center;
+      margin-top: 0.7rem;
+    }
+  }
+}

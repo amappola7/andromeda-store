@@ -1,0 +1,9 @@
+@import "../../../../../styles.scss";
+
+.sign-up__component {
+  .sign-up__container {
+    @include displayFlex(column, flex-start, center, 1.5rem);
+    height: calc(100vh - 8.5rem);
+    padding-top: 3rem;
+  }
+}
