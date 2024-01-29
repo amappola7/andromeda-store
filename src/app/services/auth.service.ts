@@ -3,6 +3,7 @@ import { generate as genRandomWord } from 'random-words';
 import { UserM } from '../models/user';
 import { UserService } from './user.service';
 import { Observable, map, take, tap } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,8 @@ export class AuthService {
   }
 
   constructor(
-    private userService: UserService
+    private userService: UserService,
+    private http: HttpClient
   ) { }
 
   userIsAuthenticated(): boolean {
@@ -50,5 +52,17 @@ export class AuthService {
 
   private getAccessToken(): string | null {
     return sessionStorage.getItem('AS_access_token');
+  }
+
+  private setHeaders(): HttpHeaders {
+    const token = this.getAccessToken();
+    return new HttpHeaders({
+      'content-type': 'application/json',
+      'authorization': `Bearer ${token}`
+    })
+  }
+
+  private getAuthenticatedResource(url: string): Observable<any> {
+    return this.http.get(url, {headers: this.setHeaders()});
   }
 }
