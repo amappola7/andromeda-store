@@ -90,6 +90,13 @@
       "price": 33500,
       "image": "https://cdn1.totalcommerce.cloud/normaco/product-zoom/es/cartuchera-fashion-dark-paradise-1.webp",
       "id": 13
+    },
+    {
+      "name": "Morral Confort Blue Garden",
+      "description": "¡Nueva colección de morrales Kiut! Pensados para organizar y distribuir mejor los implementos en el día a día. Trae espacio para PC, bolsillo para botella, bolsillo lateral y organizador interno en el bolsillo delantero. Además, encuentra un mensaje especial al interior de cada morral ¡Para inspirarte en tu vida diaria! Hay un Kiut para cada una ¿Cuál es el tuyo?",
+      "price": 142910,
+      "image": "https://cdn1.totalcommerce.cloud/normaco/product-zoom/es/morral-confort-blue-garden-1.webp",
+      "id": 14
     }
   ],
   "users": [
