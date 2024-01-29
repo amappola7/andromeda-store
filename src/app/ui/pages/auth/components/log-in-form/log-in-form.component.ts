@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-log-in-form',
@@ -8,9 +10,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LogInFormComponent implements OnInit {
   loginForm!: FormGroup;
+  showInvalidCredentialsMessage: boolean = false;
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router
   ) {};
 
   ngOnInit(): void {
@@ -22,7 +27,15 @@ export class LogInFormComponent implements OnInit {
 
   onSubmit() {
     if(this.loginForm.valid) {
-      this.loginForm.reset();
+      this.authService.logIn(this.loginForm.value);
+      const logInresult = this.authService.userIsAuthenticated();
+
+      if(logInresult) {
+        this.loginForm.reset();
+        this.router.navigate(['/admin/create-product']);
+      } else {
+        this.showInvalidCredentialsMessage = true;
+      }
     } else {
       console.log('Invalid form', this.loginForm.value);
       this.loginForm.markAllAsTouched();
