@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { generate as genRandomWord } from 'random-words';
 import { UserM } from '../models/user';
 import { UserService } from './user.service';
-import { map, tap } from 'rxjs';
+import { Observable, map, take, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -22,11 +22,13 @@ export class AuthService {
     return this.getAccessToken() ? true : false;
   }
 
-  logIn(userData: UserM): void {
-    this.userService.getUsers().pipe(
+  logIn(userData: UserM): Observable<boolean> {
+    return this.userService.getUsers().pipe(
       map((usersList) => usersList.find((user) => (userData.username === user.username && userData.password === user.password))),
-      tap((user) => {if(user) this.setAccessToken()})
-    ).subscribe();
+      tap((user) => {if(user) this.setAccessToken()}),
+      map((user) => user ? true : false),
+      take(1)
+    );
   }
 
   logOut(): void {

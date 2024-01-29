@@ -27,18 +27,16 @@ export class LogInFormComponent implements OnInit {
 
   onSubmit() {
     if(this.loginForm.valid) {
-      this.authService.logIn(this.loginForm.value);
-      const logInresult = this.authService.userIsAuthenticated();
-
-      if(logInresult) {
-        this.loginForm.reset();
-        this.router.navigate(['/admin/create-product']);
-      } else {
-        this.showInvalidCredentialsMessage = true;
-        console.log('Form Data', this.loginForm.value)
-      }
+      this.authService.logIn(this.loginForm.value)
+      .subscribe((result) => {
+        if(result) {
+          this.loginForm.reset();
+          this.router.navigate(['/admin/create-product']);
+        } else {
+          this.showInvalidCredentialsMessage = true;
+        }
+      })
     } else {
-      console.log('Invalid form', this.loginForm.value);
       this.loginForm.markAllAsTouched();
     }
   }
