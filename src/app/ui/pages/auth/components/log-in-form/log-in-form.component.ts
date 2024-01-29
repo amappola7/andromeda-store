@@ -35,6 +35,7 @@ export class LogInFormComponent implements OnInit {
         this.router.navigate(['/admin/create-product']);
       } else {
         this.showInvalidCredentialsMessage = true;
+        console.log('Form Data', this.loginForm.value)
       }
     } else {
       console.log('Invalid form', this.loginForm.value);
