@@ -25,7 +25,7 @@ export class AuthService {
   logIn(userData: UserM): void {
     this.userService.getUsers().pipe(
       map((usersList) => usersList.find((user) => userData.username === user.username && userData.password === user.password)),
-      tap((user) => user ? this.setAccessToken() : console.log('Invalid Login'))
+      tap((user) => {if(user) this.setAccessToken()})
     );
   }
 
