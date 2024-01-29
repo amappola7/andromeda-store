@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, tap, first, map, of } from 'rxjs';
+import { Observable, catchError, tap, take, map, of } from 'rxjs';
 import { UserM } from '../models/user';
 
 @Injectable({
@@ -16,7 +16,7 @@ export class UserService {
    * @returns An observable with the list of users
    */
   getUsers(): Observable<UserM[]> {
-    return this.http.get<UserM[]>(this._url).pipe(first());
+    return this.http.get<UserM[]>(this._url).pipe(take(1));
   }
 
   /**
