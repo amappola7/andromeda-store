@@ -8,10 +8,10 @@ $blue-color: #a1d8f5;
 $grey-color: #d5d5d5;
 $gradient: linear-gradient(
   90deg,
-  rgba(230, 198, 255, 1) 0%,
-  rgba(195, 164, 254, 1) 32%,
-  rgba(161, 216, 245, 1) 71%,
-  rgba(157, 233, 198, 1) 100%
+  #e6c6ff 0%,
+  #c3a4fe 32%,
+  #a1d8f5 71%,
+  #9de9c6 100%
 );
 
 @mixin displayFlex(

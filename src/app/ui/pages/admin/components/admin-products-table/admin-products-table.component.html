@@ -1,1 +1,22 @@
-<p>admin-products-table works!</p>
+<table class="products-table">
+  <head>
+    <tr>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </head>
+  <body>
+    <tr *ngFor="let product of productList$ | async ">
+      <td>{{product.image}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.description}}</td>
+      <td>{{product.price}}</td>
+      <td><button class="actions-icon"><img src="../../../../../../assets/icons/Edit.png" alt="Edit Icon"></button></td>
+      <td><button class="actions-icon"><img src="../../../../../../assets/icons/Trash.png" alt="Trash Icon"></button></td>
+    </tr>
+  </body>
+</table>
