@@ -7,7 +7,6 @@ const adminRoutes: Routes = [
   {
     path: 'create-product',
     component: AdminComponent,
-    canActivate: [authGuard]
   }
 ];
 
