@@ -1,10 +1,59 @@
-.actions-icon {
-  border: none;
-  background-color: transparent;
+@import "../../../../../../styles.scss";
+.products-table {
+  thead {
+    tr {
+      height: 3.5rem;
+      background-color: $main-color;
+      color: white;
+    }
+  }
 
-  img {
-    width: 3rem;
-    height: 3rem;
-    object-fit: cover;
+  tbody {
+    tr {
+      min-height: 5rem;
+
+      .cell {
+        padding: 0.8rem;
+      }
+      .product-image {
+        width: 8rem;
+      }
+
+      .actions-icon {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        .edit {
+          width: 2.3rem;
+          object-fit: cover;
+        }
+
+        .delete {
+          width: 1.8rem;
+        }
+      }
+    }
+
+    .row:nth-child(2n) {
+      background-color: #fbf6ff;
+    }
+  }
+
+  .name-cell {
+    width: 12rem
+  }
+
+  .description-cell {
+    width: 50rem
+  }
+
+  .price-cell {
+    width: 8rem;
+  }
+
+  .edit-cell, .delete-cell {
+    text-align: center;
+    width: 5rem;
   }
 }

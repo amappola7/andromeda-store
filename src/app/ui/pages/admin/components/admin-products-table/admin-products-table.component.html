@@ -1,22 +1,22 @@
 <table class="products-table">
-  <head>
+  <thead>
     <tr>
-      <th>Image</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Edit</th>
-      <th>Delete</th>
+      <th class="image-cell">Image</th>
+      <th class="name-cell">Name</th>
+      <th class="description-cell">Description</th>
+      <th class="price-cell">Price</th>
+      <th class="edit-cell">Edit</th>
+      <th class="delete-cell">Delete</th>
     </tr>
-  </head>
-  <body>
-    <tr *ngFor="let product of productList$ | async ">
-      <td>{{product.image}}</td>
-      <td>{{product.name}}</td>
-      <td>{{product.description}}</td>
-      <td>{{product.price}}</td>
-      <td><button class="actions-icon"><img src="../../../../../../assets/icons/Edit.png" alt="Edit Icon"></button></td>
-      <td><button class="actions-icon"><img src="../../../../../../assets/icons/Trash.png" alt="Trash Icon"></button></td>
+  </thead>
+  <tbody>
+    <tr class="row" *ngFor="let product of productList$ | async ">
+      <td class="cell image-cell"><img class="product-image" [src]="product.image" [alt]="product.name"></td>
+      <td class="cell name-cell">{{product.name}}</td>
+      <td class="cell description-cell">{{product.description}}</td>
+      <td class="cell price-cell">{{product.price | currency:'COP':true:'0.0-0'}}</td>
+      <td class="cell edit-cell"><button class="actions-icon"><img class="edit" src="../../../../../../assets/icons/Edit.png" alt="Edit Icon"></button></td>
+      <td class="cell delete-cell"><button class="actions-icon"><img class="delete" src="../../../../../../assets/icons/Trash.png" alt="Trash Icon"></button></td>
     </tr>
-  </body>
+  </tbody>
 </table>

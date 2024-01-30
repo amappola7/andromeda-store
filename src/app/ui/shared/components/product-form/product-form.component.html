@@ -1,8 +1,10 @@
 <div class="product-form__container">
   <form [formGroup]="createProductForm" (ngSubmit)="onSubmit()">
     <div class="name__control control-container">
-      <label class="lbl" for="name">Name</label>
-      <input class="ipt" id="name" formControlName="name" type="text" />
+      <div class="controls">
+        <label class="lbl" for="name">Name</label>
+        <input class="ipt" id="name" formControlName="name" type="text" />
+      </div>
       <div
         class="errors-list"
         *ngIf="
@@ -19,13 +21,15 @@
       </div>
     </div>
     <div class="description control-container">
-      <label class="lbl" for="description">Description</label>
-      <input
-        class="ipt"
-        id="description"
-        formControlName="description"
-        type="text"
-      />
+      <div class="controls">
+        <label class="lbl" for="description">Description</label>
+        <input
+          class="ipt"
+          id="description"
+          formControlName="description"
+          type="text"
+        />
+      </div>
       <div
         class="errors-list"
         *ngIf="
@@ -42,8 +46,10 @@
       </div>
     </div>
     <div class="price__control control-container">
-      <label class="lbl" for="price">Price</label>
-      <input class="ipt" id="price" formControlName="price" type="number" />
+      <div class="controls">
+        <label class="lbl" for="price">Price</label>
+        <input class="ipt" id="price" formControlName="price" type="number" />
+      </div>
       <div
         class="errors-list"
         *ngIf="
@@ -60,8 +66,10 @@
       </div>
     </div>
     <div class="image__control control-container">
-      <label class="lbl" for="image">Image</label>
-      <input class="ipt" id="image" formControlName="image" type="text" />
+      <div class="controls">
+        <label class="lbl" for="image">Image</label>
+        <input class="ipt" id="image" formControlName="image" type="text" />
+      </div>
       <div
         class="errors-list"
         *ngIf="
