@@ -31,7 +31,7 @@ export class LogInFormComponent implements OnInit {
       .subscribe((result) => {
         if(result) {
           this.loginForm.reset();
-          this.router.navigate(['/admin/create-product']);
+          this.router.navigate(['/admin']);
         } else {
           this.showInvalidCredentialsMessage = true;
         }

@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
-import { authGuard } from 'src/app/guards/auth.guard';
 
 const adminRoutes: Routes = [
   {
-    path: 'create-product',
+    path: '',
     component: AdminComponent,
   }
 ];
