@@ -37,6 +37,10 @@ export class AuthService {
     sessionStorage.removeItem('AS_access_token');
   }
 
+  getUserRole(): string {
+    return this.getUserInfo().role;
+  }
+
   private generateAccessToken(): string {
     const min = 10000000;
     const max = 99999999;
@@ -64,5 +68,10 @@ export class AuthService {
 
   private getAuthenticatedResource(url: string): Observable<any> {
     return this.http.get(url, {headers: this.setHeaders()});
+  }
+
+  private getUserInfo(): any {
+    const token = this.getAccessToken();
+    return token ? JSON.parse(atob(token).split('.')[1]) : null;
   }
 }
