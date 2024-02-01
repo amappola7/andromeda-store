@@ -13,6 +13,7 @@ import { ProductModule } from './ui/pages/product/product.module';
 import { PageNotFoundComponent } from './ui/pages/page-not-found/page-not-found.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { ErrorInterceptor } from './interceptors/error.interceptor';
+import { SetHeadersInterceptor } from './interceptors/set-headers.interceptor';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,9 @@ import { ErrorInterceptor } from './interceptors/error.interceptor';
     },
     {
       provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS, useClass: SetHeadersInterceptor, multi: true
     }
   ],
   bootstrap: [AppComponent]

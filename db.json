@@ -104,6 +104,20 @@
       "price": 44100,
       "image": "https://cdn1.totalcommerce.cloud/normaco/product-zoom/es/clasificador-fuelle-plastico-kiut-no-better-time-1.webp",
       "id": 15
+    },
+    {
+      "name": "Carpeta Durabook Kiut Peace",
+      "description": "Carpetas durabook Kiut ¡con hermosos diseños! Podrás guardar todos tus trabajos y/odocumentos de manera ordenanda",
+      "price": 16610,
+      "image": "https://cdn1.totalcommerce.cloud/normaco/product-zoom/es/carpeta-durabook-kiut-peace-1.webp",
+      "id": 16
+    },
+    {
+      "name": "Block Repuesto Kiut Carta Linea Corriente Life Goes On",
+      "description": "Block de Hojas de Repuestos Kiut ¡Con los diseños más lindos! Están diseñados para facilitar tu vida y que puedas llevar tus apuntes a donde quieras gracias a su peso y practicidad. Tamaño Carta Linea Corriente. Además, sus hojas tienen el toque único de Kiut.",
+      "price": 6900,
+      "image": "https://cdn1.totalcommerce.cloud/normaco/product-zoom/es/block-repuesto-kiut-carta-linea-corriente-life-goes-on-1.webp",
+      "id": 17
     }
   ],
   "users": [
