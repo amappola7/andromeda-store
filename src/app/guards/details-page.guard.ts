@@ -9,6 +9,6 @@ export const detailsPageGuard: CanActivateFn = (route, state) => {
   if (authService.userIsAuthenticated()) {
     return true;
   } else {
-    return router.createUrlTree(['/home']);
+    return router.createUrlTree(['auth/login']);
   }
 };
