@@ -1,15 +1,14 @@
 import { Injectable } from '@angular/core';
-import { generate as genRandomWord } from 'random-words';
 import { UserM } from '../models/user';
 import { UserService } from './user.service';
-import { Observable, map, take, tap } from 'rxjs';
+import { Observable, catchError, map, take, tap, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private _url: string = 'http://localhost:3000/users';
+  private _url: string = 'http://localhost:3000/login';
   private _userRole: string = 'user';
   get userRole(): string {
     return this._userRole;
@@ -25,12 +24,23 @@ export class AuthService {
   }
 
   logIn(userData: UserM): Observable<boolean> {
+    // Fake Version
     return this.userService.getUsers().pipe(
       map((usersList) => usersList.find((user) => (userData.username === user.username && userData.password === user.password))),
       tap((user) => {if(user) this.setAccessToken(user)}),
       map((user) => user ? true : false),
       take(1)
     );
+
+    // Real Version - Not working
+    // const loginData = {username: userData.username, password: userData.password};
+    // return this.http.post(this._url, loginData).pipe(
+    //   tap((response) => console.log('Log in result', response)),
+    //   catchError((error) => {
+    //     console.log('Error logging in', error);
+    //     return of(null);
+    //   })
+    // );
   }
 
   logOut(): void {
