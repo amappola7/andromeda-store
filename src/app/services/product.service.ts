@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, of, take, tap } from 'rxjs';
 import { ProductM, RawProductM } from '../models/product';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,10 @@ import { ProductM, RawProductM } from '../models/product';
 export class ProductService {
   private _url: string = 'http://localhost:3000/products';
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private authService: AuthService
+  ) { }
 
   getProducts(): Observable<ProductM[]> {
     return this.http.get<ProductM[]>(this._url).pipe(
@@ -39,13 +43,51 @@ export class ProductService {
   }
 
   createProduct(productData: RawProductM): Observable<ProductM | null> {
-    return this.http.post<ProductM>(this._url, productData).pipe(
-      take(1),
-      tap(() => console.log('Product successfully created')),
-      catchError((error) => {
-        console.log('Error creating product', error);
-        return of(null);
-      })
-    )
+    if (this.authService.userIsAuthenticated() && this.authService.getUserRole() === 'admin') {
+      return this.http.post<ProductM>(this._url, productData).pipe(
+        take(1),
+        tap(() => console.log('Product successfully created')),
+        catchError((error) => {
+          console.log('Error creating product', error);
+          return of(null);
+        })
+      )
+    } else {
+      alert('You don\'t have access to create a product');
+      return of(null);
+    }
   }
+
+  editProduct(productData: RawProductM): Observable<ProductM | null> {
+    if (this.authService.userIsAuthenticated() && this.authService.getUserRole() === 'admin') {
+      return this.http.put<ProductM>(this._url, productData).pipe(
+        take(1),
+        tap(() => console.log('Product successfully edited')),
+        catchError((error) => {
+          console.log('Error editing product', error);
+          return of(null);
+        })
+      )
+    } else {
+      alert('You don\'t have access to edit a product');
+      return of(null);
+    }
+  }
+
+  deleteProduct(productId: number): Observable<ProductM | null> {
+    if (this.authService.userIsAuthenticated() && this.authService.getUserRole() === 'admin') {
+      return this.http.delete<ProductM>(`${this._url}/${productId}`).pipe(
+        take(1),
+        tap(() => console.log('Product successfully deleted')),
+        catchError((error) => {
+          console.log('Error deleting product', error);
+          return of(null);
+        })
+      )
+    } else {
+      alert('You don\'t have access to delete a product');
+      return of(null);
+    }
+  }
+
 }
