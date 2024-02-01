@@ -1,17 +1,29 @@
 export interface UserM {
   id: number,
-  username: string,
-  firstName: string,
-  secondName?: string,
-  surname: string,
-  secondSurname?: string,
   email: string,
+  username: string,
   password: string,
-  address: Address
+  name: Name,
+  address: Address,
+  phone?: string,
+  __v?: string,
+  role: string
 };
 
+export interface Name {
+  firstName: string,
+  secondName?: string,
+  lastname: string,
+  lastname2?: string,
+}
+
 export interface Address {
-  street: string,
   city: string,
-  zipCode?: number
+  street: string,
+  number: number,
+  zipCode: number,
+  geolocation?: {
+    lat: string,
+    long: string,
+  }
 };
