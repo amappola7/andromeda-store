@@ -38,8 +38,8 @@ export class AuthService {
   }
 
   getUserRole(): string {
-    console.log('User Info.', this.getUserInfo());
-    return this.getUserInfo().role;
+    const user = this.getUserInfo().role;
+    return user;
   }
 
   private generateAccessToken(userInfo: UserM): string {
@@ -55,20 +55,8 @@ export class AuthService {
     return sessionStorage.getItem('AS_access_token');
   }
 
-  private setHeaders(): HttpHeaders {
+  private getUserInfo(): UserM {
     const token = this.getAccessToken();
-    return new HttpHeaders({
-      'content-type': 'application/json',
-      'authorization': `Bearer ${token}`
-    })
-  }
-
-  private getAuthenticatedResource(url: string): Observable<any> {
-    return this.http.get(url, {headers: this.setHeaders()});
-  }
-
-  private getUserInfo(): any {
-    const token = this.getAccessToken();
-    return token ? JSON.parse(atob(token).split('.')[1]) : null;
+    return token ? JSON.parse(atob(token)) : null;
   }
 }
