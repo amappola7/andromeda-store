@@ -23,7 +23,7 @@ export class ProductDetailsComponent implements OnInit {
         this.productId = params['id'];
         this.productService.getProductById(this.productId)
           .subscribe((product) => {
-            this.product = product;
+            this.product = product!;
           });
       });
   }
