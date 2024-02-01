@@ -29,6 +29,10 @@
       width: 100%;
       text-align: center;
     }
+
+    a {
+      @include displayFlex(row, center, center);
+    }
   }
 }
 

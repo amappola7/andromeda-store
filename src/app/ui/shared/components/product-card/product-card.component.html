@@ -6,8 +6,8 @@
     <h2>{{ product.name }}</h2>
     <p *ngIf="page !== 'home'">{{ product.description }}</p>
     <p class="price">{{ product.price | currency }}</p>
-    <button class="btn" *ngIf="page === 'home'" (click)="onClick(product.id)">
+    <a class="btn" *ngIf="page === 'home'" [routerLink]="['/product/details/', product.id]">
       Details
-    </button>
+    </a>
   </div>
 </div>

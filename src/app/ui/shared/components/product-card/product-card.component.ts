@@ -10,12 +10,4 @@ import { ProductM } from 'src/app/models/product';
 export class ProductCardComponent {
   @Input() product!: ProductM;
   @Input() page!: string;
-
-  constructor(
-    private router: Router
-  ) {}
-
-  onClick(productId: number) {
-    this.router.navigate([`/product/details/${productId}`]);
-  }
 }
