@@ -29,6 +29,7 @@ export class ProductService {
     return this.http.get<ProductM>(`${this._url}/${id}`).pipe(
       take(1),
       catchError((error) => {
+        alert('Product not found');
         const voidProduct: ProductM = {
           id: 0,
           name: '',

@@ -12,6 +12,7 @@ import { HomeModule } from './ui/pages/home/home.module';
 import { ProductModule } from './ui/pages/product/product.module';
 import { PageNotFoundComponent } from './ui/pages/page-not-found/page-not-found.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { ErrorInterceptor } from './interceptors/error.interceptor';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,9 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
   providers: [
     {
       provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true
     }
   ],
   bootstrap: [AppComponent]

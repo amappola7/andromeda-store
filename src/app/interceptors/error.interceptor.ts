@@ -5,19 +5,19 @@ import {
   HttpEvent,
   HttpInterceptor
 } from '@angular/common/http';
-import { Observable, tap } from 'rxjs';
+import { Observable, catchError, throwError, tap } from 'rxjs';
 
 @Injectable()
-export class AuthInterceptor implements HttpInterceptor {
+export class ErrorInterceptor implements HttpInterceptor {
 
-  constructor() {}
+  constructor() { }
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    // console.log('Outgoing HTTP request', request);
     return next.handle(request).pipe(
-      // tap((event: HttpEvent<any>) => {
-      //   console.log('Incoming HTTP response', event);
-      // })
+      catchError((error) => {
+        console.log('Error intercepted. Details:', error)
+        return throwError(() => new Error('An error has occurred'));
+      })
     );
   }
 }
