@@ -27,7 +27,7 @@ export class AuthService {
   logIn(userData: UserM): Observable<boolean> {
     return this.userService.getUsers().pipe(
       map((usersList) => usersList.find((user) => (userData.username === user.username && userData.password === user.password))),
-      tap((user) => {if(user) this.setAccessToken()}),
+      tap((user) => {if(user) this.setAccessToken(user)}),
       map((user) => user ? true : false),
       take(1)
     );
@@ -38,19 +38,16 @@ export class AuthService {
   }
 
   getUserRole(): string {
+    console.log('User Info.', this.getUserInfo());
     return this.getUserInfo().role;
   }
 
-  private generateAccessToken(): string {
-    const min = 10000000;
-    const max = 99999999;
-    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-    const keyWord = genRandomWord();
-    return `${randomNumber}@${keyWord}`;
+  private generateAccessToken(userInfo: UserM): string {
+    return btoa(JSON.stringify(userInfo));
   }
 
-  private setAccessToken(): void {
-    const token: string = this.generateAccessToken();
+  private setAccessToken(userInfo: UserM): void {
+    const token: string = this.generateAccessToken(userInfo);
     sessionStorage.setItem('AS_access_token', token);
   }
 
