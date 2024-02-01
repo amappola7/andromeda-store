@@ -30,8 +30,9 @@ export class LogInFormComponent implements OnInit {
       this.authService.logIn(this.loginForm.value)
       .subscribe((result) => {
         if(result) {
+          const role = this.authService.getUserRole();
           this.loginForm.reset();
-          this.router.navigate(['/admin']);
+          role === 'admin' ? this.router.navigate(['/admin']) : this.router.navigate(['/home']);
         } else {
           this.showInvalidCredentialsMessage = true;
         }
